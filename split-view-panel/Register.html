@@ -1,0 +1,171 @@
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left"><a href="#" class="back link"> <i class="icon icon-back"></i><span>Back</span></a></div>
+    <div class="center sliding">Register</div>
+    <div class="right"><a href="#" data-panel="left" class="link open-panel icon-only"><i class="icon icon-bars"></i></a></div>
+  </div>
+</div>
+<div class="pages">
+  <div data-page="services" class="page">
+    <div class="page-content">
+      <!DOCTYPE html>
+      <html>
+
+      <head>
+          
+          <script>
+          
+            function myFunction() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lasttName").value;
+            var DOB = document.getElementById("dateOfBirth").value;
+            var address = document.getElementById("address").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+           
+            // Returns successful data submission message when the entered information is stored in database.
+            var dataString = 'name1=' + firstName +'lastName1='+ lastName+'dateOfBrith1='+DOB+'address1='+address+'&email1=' + email + '&password1=' + password;
+            if (firstName == '' ||lastName == ''||DOB == ''||address == ''|| email == '' || password == '' || contact == '') {
+            alert("Please Fill All Fields");
+            } else {
+            // AJAX code to submit form.
+            $.ajax({
+            type: "POST",
+            url: "registercon.php",
+            data: dataString,
+            cache: false,
+            success: function(html) {
+            alert(html);
+            }
+            });
+            }
+return false;
+}
+         </script>
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1, 
+         maximum-scale = 1, minimum-scale = 1, user-scalable = no, minimal-ui" />
+        <meta name = "apple-mobile-web-app-capable" content = "yes" />
+        <meta name = "apple-mobile-web-app-status-bar-style" content = "black" />
+        <title>Enable form storage</title>
+        <link rel = "stylesheet"
+              href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.min.css" />
+        <link rel = "stylesheet"
+              href = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/css/framework7.ios.colors.min.css" />
+      </head>
+
+      <body>
+      <div class = "views">
+        <div class = "view view-main">
+          <div class = "pages">
+            <div data-page = "home" class = "page navbar-fixed">
+
+              <div class = "navbar">
+                <div class = "navbar-inner">
+                  <div class = "left"> </div>
+                  <div class = "center">Register page</div>
+                  <div class = "right"> </div>
+                </div>
+              </div>
+
+              <div class = "page-content">
+                <div class = "content-block"><h2>Fill the following fields to complete your registration:</h2></div>
+                <form  id = "my-form" name ="form" class = "list-block store-data" >
+                    
+                  <ul>
+                    <li>
+                      <div class = "item-content">
+                        <div class = "item-inner">
+                          <div class = "item-input">
+                            <input id = "firstName" type = "text" name = "firstName" placeholder = "Enter your First name">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    
+                    <li>
+                      <div class = "item-content">
+                        <div class = "item-inner">
+                          <div class = "item-input">
+                            <input id = "lastName" type = "text" name = "lastName" placeholder = "Enter your Last name">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class = "item-content">
+                        <div class = "item-inner">
+                          <div class = "item-input">
+                            Date of Birth:<input id ="dateOfBirth" type = "date" name = "dateOfBirth">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    
+                   
+
+                    <li>
+                      <div class = "item-content">
+                        <div class = "item-inner">
+                          <div class = "item-input">
+                            <input id="address" type = "text" name = "Address" placeholder = "Enter your Address">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class = "item-content">
+                        <div class = "item-inner">
+                          <div class = "item-input">
+                            <input id="email" type = "email" name = "email" placeholder = "Enter your e-mail">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class = "item-content">
+                        <div class = "item-inner">
+                          <div class = "item-input">
+                            <input id = "password" type = "password" name = "Password" placeholder = "Enter your Password">
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                    <button onclick="myFunction()">Click here</button>
+                    <input id = "submit" onclick="myFunction()" type="button" value = "Submit"/>
+                      <p class = "buttons-row"> 
+                        <a href="script.js" class="button active">Register</a>
+						  </p>
+                    
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+          
+
+      <script type = "text/javascript"
+              src = "https://cdnjs.cloudflare.com/ajax/libs/framework7/1.4.2/js/framework7.min.js"></script>
+
+      <script>
+         var myApp = new Framework7();
+      </script>
+      </body>
+
+      </html>      <div class="content-block">
+
+
+
+
+      </div>
+    </div>
+  </div>
+</div>
